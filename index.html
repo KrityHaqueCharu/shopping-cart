@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button  class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button id="minus1" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="num1" type="text" class="form-control text-center" value="1">
                            <button id="plus1" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$<span id="dol">1219</span></h5>
+                        <h5>$<span id="dolll">1219</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,12 +43,12 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button id="minus2" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="num2" type="text" class="form-control text-center" value="1">
                            <button id="plus2" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$<span id="doll" >59</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -82,20 +82,52 @@
       //increase btn
       const increbtn = document.getElementById("plus1");
       increbtn.addEventListener("click",function(){
-         addone("num1");
+         numm=addone("num1");
+         //console.log(numm);
+         dol1=document.getElementById("dolll").innerText;
+         dolnum1=parseFloat(dol1);
+         con=numm*dolnum1;
+         //console.log(con);
+         document.getElementById("dolll").innerText=con;
+         
       })
       const increbtn1 = document.getElementById("plus2");
       increbtn1.addEventListener("click",function(){
-         addone("num2");
+         nummm=addone("num2");
+         //console.log(nummm);
+         dol2=document.getElementById("doll").innerText;
+         dolnum2=parseFloat(dol2);
+         con1=nummm*dolnum2;
+         //console.log(con1);
+         document.getElementById("doll").innerText=con1;
       })
-      
+      //decrease 
+      //const decrebtn = document.getElementById("minus1");
+      //increbtn.addEventListener("click",function(){
+        //  lessone("num1");
+      //})
+
+
+
+
       function addone(id){
          let quantity= document.getElementById(id).value;
          quantitynum=parseFloat(quantity);
          quantitynum++;
          document.getElementById(id).value=quantitynum;
-         
+         return quantitynum;
          }
+         //function lessone(id){
+          //quantity1=document.getElementById(id).value;
+          //quantitynum1=parseFloat(quantity1);
+          //if(quantitynum1==1){
+            // quantity1;
+          //}else{
+            // quantitynum1--;
+          //}
+          //document.getElementById(id).value=quantitynum1;
+         //return quantitynum1;
+         //}
    </script>
 </body>
 
