@@ -29,7 +29,7 @@
                            <input id="num1" type="text" class="form-control text-center" value="1">
                            <button id="plus1" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$<span id="dol"> 1219</span></h5>
+                        <h5>$<span id="dol">1219</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,9 +43,9 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="plus2" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input  type="text" class="form-control text-center" value="1">
-                           <button id="num2" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="num2" type="text" class="form-control text-center" value="1">
+                           <button id="plus2" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
                         <h5>$59</h5>
@@ -84,12 +84,17 @@
       increbtn.addEventListener("click",function(){
          addone("num1");
       })
+      const increbtn1 = document.getElementById("plus2");
+      increbtn1.addEventListener("click",function(){
+         addone("num2");
+      })
       
       function addone(id){
          let quantity= document.getElementById(id).value;
          quantitynum=parseFloat(quantity);
-         console.log(quantitynum++);
+         quantitynum++;
          document.getElementById(id).value=quantitynum;
+         
          }
    </script>
 </body>
