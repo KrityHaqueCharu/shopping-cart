@@ -83,29 +83,43 @@
       const increbtn = document.getElementById("plus1");
       increbtn.addEventListener("click",function(){
          numm=addone("num1");
+         //numm=addone(id);
+         addinnertext("dolll",numm);
+
          //console.log(numm);
-         dol1=document.getElementById("dolll").innerText;
-         dolnum1=parseFloat(dol1);
-         con=numm*dolnum1;
+         //dol1=document.getElementById("dolll").innerText;
+         //dolnum1=parseFloat(dol1);
+         //con=numm*dolnum1;
          //console.log(con);
-         document.getElementById("dolll").innerText=con;
+         //document.getElementById("dolll").innerText=con;
          
       })
       const increbtn1 = document.getElementById("plus2");
       increbtn1.addEventListener("click",function(){
          nummm=addone("num2");
+         addinnertext("doll",nummm);
          //console.log(nummm);
-         dol2=document.getElementById("doll").innerText;
-         dolnum2=parseFloat(dol2);
-         con1=nummm*dolnum2;
+         //dol2=document.getElementById("doll").innerText;
+         //dolnum2=parseFloat(dol2);
+         //con1=nummm*dolnum2;
          //console.log(con1);
-         document.getElementById("doll").innerText=con1;
+         //document.getElementById("doll").innerText=con1;
       })
+
       //decrease 
       //const decrebtn = document.getElementById("minus1");
       //increbtn.addEventListener("click",function(){
         //  lessone("num1");
       //})
+      function addinnertext(id,numm){
+         console.log(numm);
+         dol1=document.getElementById(id).innerText;
+         dolnum1=parseFloat(dol1);
+         con=numm*dolnum1;
+         console.log(con);
+         document.getElementById(id).innerText=con;
+         
+      }
 
 
 
